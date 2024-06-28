@@ -10,7 +10,7 @@ body, html {
 
 .landing {
     height: 100vh;
-    background: url('./images/forest.jpg') no-repeat center center/cover;
+    background: url('./images/forest2.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,6 +18,12 @@ body, html {
     text-align: center;
 
 }
+
+#more{
+    display: none;
+}
+
+
 
 .active{
 	color: #ff9800;
@@ -35,6 +41,47 @@ body, html {
     padding: 0 20px; 
     box-sizing: border-box;
 	height: 65px;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.image{
+    position: relative;
+    width: 300px;
+    height: 400px ;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+strong{
+    color: #e68900;
+}
+
+.content:hover{
+    opacity: 1;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.img{
+    width: 300px;
+    height: 400px ;
 }
 
 header {
@@ -76,13 +123,13 @@ nav ul li a:hover {
 .hero h1 {
     font-size: 3em;
     margin: 0;
-    animation: fadeInDown 2s ease-in-out;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 .hero p {
     font-size: 1.5em;
     margin: 20px 0;
-    animation: fadeInUp 2s ease-in-out;
+    animation: fadeInDown 2s ease-in-out;
 }
 
 .cta-btn {
@@ -92,6 +139,8 @@ nav ul li a:hover {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    border: none;
+    outline: none;
     transition: background 0.3s;
 }
 
@@ -107,7 +156,46 @@ nav ul li a:hover {
     max-width: 1200px;
     text-align: center;
     border-radius: 8px;
-    animation: fadeIn 1.5s ease-in-out;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    animation: fadeInDown 1s ease-in-out
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% ; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+ul{
+    list-style: none;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .section:nth-child(even) {
@@ -119,6 +207,21 @@ footer {
     padding: 20px;
     background: #333;
     color: white;
+}
+
+input{
+    outline: none;
+    border: 1px solid #ff9800;
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 @keyframes fadeInDown {
@@ -143,11 +246,11 @@ footer {
     }
 }
 
-@keyframes fadeIn {
+ @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
     }
-}
+} 

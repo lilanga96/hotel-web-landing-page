@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bamblymb Forest Leisure</title>
     <link rel="stylesheet" href="style.css">
+    <script src="jquery/jquery.js" type="text/javascript" defer></script>
+    <script src="./scripts.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </head>
 <body>
     <div class="landing" id="home">
@@ -31,18 +35,157 @@
     <section id="about" class="section">
         <h2>About Us</h2>
         <p>Discover the tranquility and beauty of our forest retreat, where comfort meets nature.</p>
+        <p>Nestled in the heart of East London, Eastern Cape, Bamblymn Forest Leisure offers a serene 
+            escape amidst nature's finest landscapes. Our hotel is a haven for travelers seeking a perfect
+             blend of luxury, comfort, and adventure. Surrounded by lush forests and tranquil greenery, 
+             Bamblymn Forest Leisure provides an idyllic retreat from the hustle and bustle of city life. <span id="dots">...</span>
+             </p>
+            
+             <span id="more">
+                Bamblymn Forest Leisure was born out of a vision to create a sanctuary where guests can reconnect with 
+             nature while enjoying world-class amenities. Our commitment to excellence and passion for hospitality are
+              reflected in every aspect of our service, ensuring that your stay with us is nothing short of extraordinary.
+             </span>
+             <button class="cta-btn" onclick="readMore()" id="readMoreBtn">Read More</button>
     </section>
-    <section id="rooms" class="section">
-        <h2>Rooms</h2>
+    <section id="rooms"  data-aos="fade-up"  data-aos-duration="2000" class="section">
+        <h2>Rooms</h2> 
         <p>Luxurious and comfortable rooms that blend seamlessly with the surrounding nature.</p>
+        <div class="images">
+            <div class="img1">
+        <img class="img" src="./images/image1.jpg">
+        <button onclick="showModal1()" class="cta-btn bttn">See more</button>
+    </div>
+    <div class="img2">
+        <img class="img" src="./images/image1.jpg">
+        <button  onclick="showModal2()" class="cta-btn bttn">See more</button>
+    </div>
+    <div class="img3">
+        <img class="img" src="./images/image1.jpg">
+        <button  onclick="showModal3()" class="cta-btn bttn">See more</button>
+    </div>
+    </div>
+
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><ul>
+                <li><strong>Size:</strong> Usually accommodates one or two guests, with options for single, double, or twin beds.</li>
+                <li><strong>Bathroom:</strong> Private bathroom with a shower or bathtub, toilet, and sink. Basic toiletries and towels are provided.</li>
+                <li><strong>Entertainment:</strong> A television with cable or satellite channels.</li>
+                <li><strong>Wi-Fi:</strong> Complimentary or paid internet access.</li>
+                <li><strong>Other Amenities:</strong> 
+                    <ul>
+                        <li>Telephone</li>
+                        <li>Coffee/tea maker</li>
+                        <li>Mini-fridge</li>
+                        <li>Safe</li>
+                        <li>Hairdryer</li>
+                        <li>Iron and ironing board (on request)</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Pricing in Rands</h2>
+            <div class="price-category">
+                <strong>Budget Hotel:</strong>ZAR 700 per night
+            </div></p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><ul>
+                <li><strong>Size:</strong> Usually accommodates one or two guests, with options for single, double, or twin beds.</li>
+                <li><strong>Bathroom:</strong> Private bathroom with a shower or bathtub, toilet, and sink. Basic toiletries and towels are provided.</li>
+                <li><strong>Entertainment:</strong> A television with cable or satellite channels.</li>
+                <li><strong>Wi-Fi:</strong> Complimentary or paid internet access.</li>
+                <li><strong>Other Amenities:</strong> 
+                    <ul>
+                        <li>Telephone</li>
+                        <li>Coffee/tea maker</li>
+                        <li>Mini-fridge</li>
+                        <li>Safe</li>
+                        <li>Hairdryer</li>
+                        <li>Iron and ironing board (on request)</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Pricing in Rands</h2>
+            <div class="price-category">
+                <strong>Budget Hotel:</strong>ZAR 800 per night
+            </div></p>
+        </div>
+    </div>
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><ul>
+                <li><strong>Size:</strong> Usually accommodates one or two guests, with options for single, double, or twin beds.</li>
+                <li><strong>Bathroom:</strong> Private bathroom with a shower or bathtub, toilet, and sink. Basic toiletries and towels are provided.</li>
+                <li><strong>Entertainment:</strong> A television with cable or satellite channels.</li>
+                <li><strong>Wi-Fi:</strong> Complimentary or paid internet access.</li>
+                <li><strong>Other Amenities:</strong> 
+                    <ul>
+                        <li>Telephone</li>
+                        <li>Coffee/tea maker</li>
+                        <li>Mini-fridge</li>
+                        <li>Safe</li>
+                        <li>Hairdryer</li>
+                        <li>Iron and ironing board (on request)</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Pricing in Rands</h2>
+            <div class="price-category">
+                <strong>Budget Hotel:</strong>ZAR 1100 per night
+            </div></p>
+        </div>
+    </div>
+       
     </section>
-    <section id="amenities" class="section">
+    <section id="amenities"  data-aos="fade-in"  data-aos-duration="1500" class="section">
+        <div class="info-container">
         <h2>Amenities</h2>
         <p>Enjoy top-notch facilities including a spa, swimming pool, and gourmet dining.</p>
+        <div class="images">
+            <div class="image">
+                <img class="img" src="./images/spa.jpg">
+                <div class="content">
+                    <p class="image-desciption"><strong>Spa & Wellness Center</strong> : Rejuvenate your body and mind with our luxurious spa treatments 
+                        and wellness programs.</p> 
+                </div>
+            </div>
+            <div class="image">
+                <img class="img" src="./images/dining.jpg">
+                <div class="content">
+                    <p class="image-description"><strong>Gourmet Dining</strong> : your taste buds at our on-site restaurant, where our chefs create culinary masterpieces using 
+                        the freshest local ingredients. </p> 
+                </div>
+            </div>
+    
+            <div class="image">
+                <img class="img" src="./images/pool.jpg">
+                <div class="content">
+                    <p class="image-description"> <strong>Swimming Pool</strong> : Perfect for weddings, conferences, and special occasions, our versatile event spaces are equipped with
+                        modern facilities to ensure your event is a success.</p>
+                </div>
+            </div>
+        </div>
+       
     </section>
     <section id="contact" class="section">
         <h2>Contact Us</h2>
         <p>Get in touch to book your stay or for more information.</p>
+        <div class="contact">
+            <div class="from">
+       <h5>From: <input type="date"></h5>
+     </div>
+     <div  class="to">
+       <h5>To: <input type="date"></h5>
+    </div>
+    </div>
+      <button class="cta-btn">Check availability</button>
     </section>
     <footer>
         <p>&copy; 2024 Bamblymb Forest Leisure. All rights reserved.</p>
